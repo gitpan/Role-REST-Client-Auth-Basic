@@ -9,31 +9,33 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Basic Authentication for REST Client Role',
-  'AUTHOR' => 'Kaare Rasmussen <kaare at cpan dot net>',
-  'BUILD_REQUIRES' => {
-    'File::Find' => '0',
-    'File::Temp' => '0',
-    'Module::Build' => '0.3601',
-    'Moose' => '0',
-    'Role::REST::Client' => '0.02',
-    'Test::More' => '0.88'
+  "ABSTRACT" => "Basic Authentication for REST Client Role",
+  "AUTHOR" => "Kaare Rasmussen <kaare at cpan dot net>",
+  "BUILD_REQUIRES" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Module::Build" => "0.3601",
+    "Moose" => 0,
+    "Role::REST::Client" => "0.02",
+    "Test::More" => "0.88",
+    "strict" => 0,
+    "warnings" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30',
-    'Module::Build' => '0.3601'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30",
+    "Module::Build" => "0.3601"
   },
-  'DISTNAME' => 'Role-REST-Client-Auth-Basic',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Role::REST::Client::Auth::Basic',
-  'PREREQ_PM' => {
-    'MIME::Base64' => '0',
-    'Moose::Role' => '0'
+  "DISTNAME" => "Role-REST-Client-Auth-Basic",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Role::REST::Client::Auth::Basic",
+  "PREREQ_PM" => {
+    "MIME::Base64" => 0,
+    "Moose::Role" => 0
   },
-  'VERSION' => '0.01',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.02",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

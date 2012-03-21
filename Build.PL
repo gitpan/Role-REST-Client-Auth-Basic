@@ -6,34 +6,36 @@ use Module::Build 0.3601;
 
 
 my %module_build_args = (
-  'build_requires' => {
-    'File::Find' => '0',
-    'File::Temp' => '0',
-    'Module::Build' => '0.3601',
-    'Moose' => '0',
-    'Role::REST::Client' => '0.02',
-    'Test::More' => '0.88'
+  "build_requires" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Module::Build" => "0.3601",
+    "Moose" => 0,
+    "Role::REST::Client" => "0.02",
+    "Test::More" => "0.88",
+    "strict" => 0,
+    "warnings" => 0
   },
-  'configure_requires' => {
-    'ExtUtils::MakeMaker' => '6.30',
-    'Module::Build' => '0.3601'
+  "configure_requires" => {
+    "ExtUtils::MakeMaker" => "6.30",
+    "Module::Build" => "0.3601"
   },
-  'dist_abstract' => 'Basic Authentication for REST Client Role',
-  'dist_author' => [
-    'Kaare Rasmussen <kaare at cpan dot net>'
+  "dist_abstract" => "Basic Authentication for REST Client Role",
+  "dist_author" => [
+    "Kaare Rasmussen <kaare at cpan dot net>"
   ],
-  'dist_name' => 'Role-REST-Client-Auth-Basic',
-  'dist_version' => '0.01',
-  'license' => 'perl',
-  'module_name' => 'Role::REST::Client::Auth::Basic',
-  'recommends' => {},
-  'recursive_test_files' => 1,
-  'requires' => {
-    'MIME::Base64' => '0',
-    'Moose::Role' => '0',
-    'perl' => '5.010'
+  "dist_name" => "Role-REST-Client-Auth-Basic",
+  "dist_version" => "0.02",
+  "license" => "perl",
+  "module_name" => "Role::REST::Client::Auth::Basic",
+  "recommends" => {},
+  "recursive_test_files" => 1,
+  "requires" => {
+    "MIME::Base64" => 0,
+    "Moose::Role" => 0,
+    "perl" => "5.010"
   },
-  'script_files' => []
+  "script_files" => []
 );
 
 

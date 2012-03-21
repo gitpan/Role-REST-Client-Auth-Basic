@@ -1,13 +1,13 @@
 package Role::REST::Client::Auth::Basic;
 {
-  $Role::REST::Client::Auth::Basic::VERSION = '0.01';
+  $Role::REST::Client::Auth::Basic::VERSION = '0.02';
 }
 
 use 5.010;
 use Moose::Role;
 use MIME::Base64;
 
-requires '_call', '_headers';
+requires '_call', 'httpheaders';
 
 has 'user' => (
 	isa => 'Str',
@@ -48,7 +48,7 @@ Role::REST::Client::Auth::Basic - Basic Authentication for REST Client Role
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
