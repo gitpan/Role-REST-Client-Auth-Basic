@@ -1,6 +1,6 @@
 package Role::REST::Client::Auth::Basic;
 {
-  $Role::REST::Client::Auth::Basic::VERSION = '0.02';
+  $Role::REST::Client::Auth::Basic::VERSION = '0.03';
 }
 
 use 5.010;
@@ -48,7 +48,7 @@ Role::REST::Client::Auth::Basic - Basic Authentication for REST Client Role
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

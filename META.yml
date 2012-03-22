@@ -7,7 +7,7 @@ build_requires:
   File::Temp: 0
   Module::Build: 0.3601
   Moose: 0
-  Role::REST::Client: 0.02
+  Role::REST::Client: 0.03
   Test::More: 0.88
   strict: 0
   warnings: 0
@@ -27,4 +27,4 @@ requires:
   perl: 5.010
 resources:
   repository: git://github.com/kaare/Role-REST-Client-Auth-Basic.git
-version: 0.02
+version: 0.03

@@ -37,7 +37,7 @@
             "File::Find" : "0",
             "File::Temp" : "0",
             "Moose" : "0",
-            "Role::REST::Client" : "0.02",
+            "Role::REST::Client" : "0.03",
             "Test::More" : "0.88",
             "strict" : "0",
             "warnings" : "0"
@@ -52,6 +52,6 @@
          "web" : "http://github.com/kaare/Role-REST-Client-Auth-Basic"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }
 

@@ -11,7 +11,7 @@ my %module_build_args = (
     "File::Temp" => 0,
     "Module::Build" => "0.3601",
     "Moose" => 0,
-    "Role::REST::Client" => "0.02",
+    "Role::REST::Client" => "0.03",
     "Test::More" => "0.88",
     "strict" => 0,
     "warnings" => 0
@@ -25,7 +25,7 @@ my %module_build_args = (
     "Kaare Rasmussen <kaare at cpan dot net>"
   ],
   "dist_name" => "Role-REST-Client-Auth-Basic",
-  "dist_version" => "0.02",
+  "dist_version" => "0.03",
   "license" => "perl",
   "module_name" => "Role::REST::Client::Auth::Basic",
   "recommends" => {},

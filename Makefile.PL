@@ -16,7 +16,7 @@ my %WriteMakefileArgs = (
     "File::Temp" => 0,
     "Module::Build" => "0.3601",
     "Moose" => 0,
-    "Role::REST::Client" => "0.02",
+    "Role::REST::Client" => "0.03",
     "Test::More" => "0.88",
     "strict" => 0,
     "warnings" => 0
@@ -33,7 +33,7 @@ my %WriteMakefileArgs = (
     "MIME::Base64" => 0,
     "Moose::Role" => 0
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }
