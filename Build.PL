@@ -25,15 +25,14 @@ my %module_build_args = (
     "Kaare Rasmussen <kaare at cpan dot net>"
   ],
   "dist_name" => "Role-REST-Client-Auth-Basic",
-  "dist_version" => "0.03",
+  "dist_version" => "0.04",
   "license" => "perl",
   "module_name" => "Role::REST::Client::Auth::Basic",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
     "MIME::Base64" => 0,
-    "Moose::Role" => 0,
-    "perl" => "5.010"
+    "Moose::Role" => 0
   },
   "script_files" => []
 );

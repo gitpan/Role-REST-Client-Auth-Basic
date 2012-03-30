@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.010;
+
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -33,7 +33,7 @@ my %WriteMakefileArgs = (
     "MIME::Base64" => 0,
     "Moose::Role" => 0
   },
-  "VERSION" => "0.03",
+  "VERSION" => "0.04",
   "test" => {
     "TESTS" => "t/*.t"
   }
