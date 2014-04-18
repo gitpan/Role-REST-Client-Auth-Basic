@@ -4,7 +4,7 @@
       "Kaare Rasmussen <kaare at cpan dot net>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640",
+   "generated_by" : "Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -27,19 +27,22 @@
       },
       "runtime" : {
          "requires" : {
-            "MIME::Base64" : 0,
-            "Moose::Role" : 0
+            "MIME::Base64" : "0",
+            "Moo" : "1.003000",
+            "Moo::Role" : "0",
+            "Type::Tiny" : "0.024",
+            "Types::Standard" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "File::Find" : 0,
-            "File::Temp" : 0,
-            "Moose" : 0,
+            "File::Find" : "0",
+            "File::Temp" : "0",
+            "Moo" : "1.003000",
             "Role::REST::Client" : "0.03",
             "Test::More" : "0.88",
-            "strict" : 0,
-            "warnings" : 0
+            "strict" : "0",
+            "warnings" : "0"
          }
       }
    },
@@ -51,6 +54,6 @@
          "web" : "http://github.com/kaare/Role-REST-Client-Auth-Basic"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
 

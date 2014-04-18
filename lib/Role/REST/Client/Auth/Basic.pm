@@ -1,35 +1,33 @@
 package Role::REST::Client::Auth::Basic;
-{
-  $Role::REST::Client::Auth::Basic::VERSION = '0.04';
-}
-
-use Moose::Role;
+$Role::REST::Client::Auth::Basic::VERSION = '0.05';
+use Moo::Role;
 use MIME::Base64;
+use Types::Standard qw(Str);
 
 requires '_call', 'httpheaders';
 
+
 has 'user' => (
-	isa => 'Str',
+	isa => Str,
 	is  => 'rw',
-    predicate => 'has_user',
 	trigger => sub {
 		my ($self, $user) = @_;
 		Carp::croak("Basic authentication user name can't contain ':'") if $user =~ /:/;
 	},
 );
 has 'passwd' => (
-	isa => 'Str',
+	isa => Str,
 	is  => 'rw',
-    predicate => 'has_passwd',
 );
 
 before '_call' => sub {
 	my ($self, $method, $endpoint, $data, $args) = @_;
 	return if $args->{authentication} and $args->{authentication} ne 'basic';
 
-	if ($self->has_user) {
-		my $user = $self->user;
-		my $passwd = $self->has_passwd ? $self->passwd : '';
+	my $user = $self->user;
+	if (defined $user) {
+		my $passwd = $self->passwd();
+		$passwd = '' if !defined $passwd;
 		$self->set_header('Authorization', 'Basic ' . MIME::Base64::encode("$user:$passwd", ''));
 	}
 	return;
@@ -37,9 +35,9 @@ before '_call' => sub {
 
 1;
 
-
-
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -47,7 +45,7 @@ Role::REST::Client::Auth::Basic - Basic Authentication for REST Client Role
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -105,6 +103,10 @@ Role::REST::Client::Auth::Basic - Basic Authentication for REST Client Role
 
 Kaare Rasmussen, <kaare at cpan dot com>
 
+=head1 CONTRIBUTORS
+
+Aran Deltac, (cpan:BLUEFEET) <bluefeet@gmail.com>
+
 =head1 BUGS 
 
 Please report any bugs or feature requests to bug-role-rest-client-auth-basic at rt.cpan.org, or through the
@@ -112,7 +114,7 @@ web interface at http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Role-REST-Client
 
 =head1 COPYRIGHT & LICENSE 
 
-Copyright 2012 Kaare Rasmussen, all rights reserved.
+Copyright 2014 Kaare Rasmussen, all rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under the same terms as 
 Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may 
@@ -124,13 +126,12 @@ Kaare Rasmussen <kaare at cpan dot net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Kaare Rasmussen.
+This software is copyright (c) 2014 by Kaare Rasmussen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

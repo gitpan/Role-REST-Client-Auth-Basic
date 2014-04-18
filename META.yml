@@ -6,7 +6,7 @@ build_requires:
   File::Find: 0
   File::Temp: 0
   Module::Build: 0.3601
-  Moose: 0
+  Moo: 1.003000
   Role::REST::Client: 0.03
   Test::More: 0.88
   strict: 0
@@ -15,7 +15,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.30
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640'
+generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,7 +23,10 @@ meta-spec:
 name: Role-REST-Client-Auth-Basic
 requires:
   MIME::Base64: 0
-  Moose::Role: 0
+  Moo: 1.003000
+  Moo::Role: 0
+  Type::Tiny: 0.024
+  Types::Standard: 0
 resources:
   repository: git://github.com/kaare/Role-REST-Client-Auth-Basic.git
-version: 0.04
+version: 0.05
